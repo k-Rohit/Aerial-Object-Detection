@@ -1,0 +1,149 @@
+.gradient-background {
+  background: linear-gradient(300deg, #0f90bd, #ffffff, #d4d4d9);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  height: 100px;
+  border-radius: 50%;
+}
+
+.h1{
+  font-family: 'Montserrat';
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+  color: white;
+  padding-bottom: 30px;
+  padding-top: 60px;
+}
+
+.title-text{
+  color: black;
+}
+
+.aod{
+  color: black;
+}
+
+.nav-text{
+  font-size: 25px;
+  font-family: 'ubuntu';
+}
+
+.logo{
+  /* width: 20px;
+  height: 20px; */
+  border-radius: 100%;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+.slider {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 150px;
+    color: white;
+    font-family: sans-serif;
+    text-align: right;
+}
+.slider input {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.press-image{
+    width: 250px;
+    height: 250px;
+}
+
+#footer{
+    background-color: white;
+    text-align: center;
+    padding: 20%;
+    color: #8f8f8f;
+    margin: 3%;
+}
+
+.dynamic-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 5em auto;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.random-word {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #BBAADD;
+  letter-spacing: 3px;
+  width: auto;
+/*   transition: all 1.25s; */
+  animation: slidedown 4s infinite;
+  -webkit-animation: slidedown 4s infinite;
+  -moz-animation: slidedown 4s infinite;
+}
+
+@keyframes slidedown {
+  0% {
+    opacity: 50;
+  }
+
+  5% {
+    opacity: 0;
+    transform: translateY(0.5em);
+  }
+
+  7% {
+    transform: translateY(-1em);
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateY(0);
+    opacity: 100;
+  }
+}
+
+#footer{
+    background-color: white;
+    text-align: center;
+    padding: 5%;
+    color: #8f8f8f;
+    margin: 3%;
+}
+
+.fimg:hover {
+    color: #09c5e7; /* change the color to red on hover */
+}
+
+

@@ -2,6 +2,7 @@ import os
 import sys
 import zipfile
 import gdown
+import shutil
 from aerialobjectdetection.logger import logging
 from aerialobjectdetection.exception import AppException
 from aerialobjectdetection.entity.config_entity import DataIngestionConfig
@@ -32,6 +33,8 @@ class DataIngestion:
             gdown.download(prefix+file_id,zip_file_path)
             
             logging.info(f"Downloaded data from {dataset_url} into {zip_file_path}")
+            shutil.copy(zip_file_path, os.getcwd())
+            logging.info(f"Copied the zip file in {os.getcwd()}")
 
             return zip_file_path
         except Exception as e:

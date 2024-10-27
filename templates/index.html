@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aerial Object Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Ubuntu:wght@500&display=swap"
+    rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+
+     <section id="nav" style="margin-bottom: 0px;">
+        <header class="p-3 text-bg-dark">
+            <div class="container">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 text-white nav-text" style="padding-top: 15px;"><img src="static/jeticon.png" alt="" width="40px" height="40px" hspace="5px">AOD</a></li>
+                </ul>
+
+                <div class="text-end">
+                    <h4 style="padding-top: 15px">Enhancing Aviation Safety and Security with YOLOv8</h4>
+                </div>
+              </div>
+            </div>
+          </header>
+        </section>
+
+
+    <section id="hero-section" style="padding-bottom: 100px;">
+      <div class="container-fluid gradient-background">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <video width="600" height="600" controls loop autoplay>
+                    <source src="static/mixkit-military-jets-formation-crossing-the-sky-7373-medium.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="col-lg-6">
+                <h1 class="fw-bold aod" style="font-size: 60px;">Airborne Object Detection</h1>
+                <p class="info" style="color:gray; text-align: justify">Welcome to our website dedicated to airborne object detection using YOLOv8. Our platform offers an accurate and efficient means of detecting airplanes, helicopters, and drones in real-time. We have developed a state-of-the-art deep learning model that is capable of identifying these objects with exceptional precision and speed. Our platform has the potential to contribute significantly to the enhancement of aviation safety, security, and environmental monitoring.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    </section>
+
+<div id="press" style="padding-left: 260px; padding-bottom: 150px; padding-top: 100px;">
+    <img class="press-image" src="static/icons-hero.png" alt="tc-logo" style="padding-left: 20px">
+    <img class="press-image" src="static/flask-python.png" alt="tnw-logo" style="margin: auto;">
+    <img class="press-image" src="static/download.png" alt="biz-insider-logo">
+    <img class="press-image" src="static/5847f5bdcef1014c0b5e489c.png" alt="mashable-logo">
+
+  </div>
+
+
+      <div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+        <h1 class="display-5 fw-bold text-white">Upload images or videos</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4" style="text-align: justify">Our platform is straightforward to use. Simply upload your aerial footage or connect to a live video feed, and our YOLOv8 model will begin detecting objects in real-time. You can customize the settings to focus on specific types of objects, adjust the sensitivity threshold, and more.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+                </div>
+                <div id="previewContainer"></div>
+                <form method="POST" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                          {{form.hidden_tag()}}
+                          {{form.file(class_ = 'btn btn-outline-info btn-md px-4 me-sm-3 fw-bold')}}
+                          {{form.submit(class_ = 'btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold')}}
+                        </div>
+                    <!-- </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer id="footer">
+    <i class="fa-brands fa-twitter fimg" style="padding-right: 7px"></i>
+    <i class="fa-brands fa-facebook fimg " style="padding-right: 7px"></i>
+    <i class="fa-brands fa-instagram fimg" style="padding-right: 7px"></i>
+    <i class="fa-solid fa-envelope fimg" style="padding-right: 7px"></i>
+    <p class="copy">© Copyright AOD</p>
+  </footer>
+
+
+    <script src="https://kit.fontawesome.com/dcb4322f1a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="static/index.js"></script>
+
+</body>
+</html>
