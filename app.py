@@ -1,13 +1,12 @@
-# from aerialobjectdetection.pipeline.training_pipeline import TrainPipeline
+
 
 # obj = TrainPipeline()
 # obj.run_pipeline()
 
 
-
-import math
 import os
 import cv2
+import math
 from PIL import Image
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
@@ -15,6 +14,7 @@ from ultralytics import YOLO
 from werkzeug.utils import secure_filename
 from wtforms import FileField, SubmitField
 from wtforms.validators import InputRequired
+from aerialobjectdetection.pipeline.training_pipeline import TrainPipeline
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'key1'
@@ -96,6 +96,12 @@ def predict():
         return render_template('video.html')
     return render_template('index.html', form=form)
 
+@app.route("/train")
+def trainRoute():
+    obj = TrainPipeline()
+    obj.run_pipeline()
+    return "Training Successful"
+
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(debug=True, port=80) # For Azure
