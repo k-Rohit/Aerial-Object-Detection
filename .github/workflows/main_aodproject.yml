@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'aodproject'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_984f3cee6a8c4bc89eda3593f75a2c2a }}
-        images: 'aodproject.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_ea7bbdbf300b4dd891b804dca121fcfd }}/aod:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_30a1f155961d4e02a5e55b29bf694a35 }}
+        images: 'aodproject.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_3667dc7b7028402595d55ad93a4aed2d }}/aod:${{ github.sha }}'
