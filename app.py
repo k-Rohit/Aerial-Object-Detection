@@ -1,9 +1,3 @@
-
-
-# obj = TrainPipeline()
-# obj.run_pipeline()
-
-
 import os
 import cv2
 import math
@@ -19,7 +13,8 @@ from aerialobjectdetection.pipeline.training_pipeline import TrainPipeline
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'key1'
 app.config['UPLOAD_FOLDER'] = 'Uploads'
-model_path = '/Users/kumarrohit/Desktop/Aerial-Object-Detection/Aerial-Object-Detection/YOLOv8Dataset/runs/detect/train/weights/best.pt'
+current_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(current_dir, "models", "best.pt")
 image_array = []
 
 
