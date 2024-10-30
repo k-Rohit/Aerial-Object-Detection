@@ -15,7 +15,6 @@ app.config['SECRET_KEY'] = 'key1'
 app.config['UPLOAD_FOLDER'] = 'Uploads'
 current_dir = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(current_dir, "models", "best.pt")
-image_array = []
 
 
 class UploadFileForm(FlaskForm):
@@ -99,4 +98,4 @@ def trainRoute():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=80) # For Azure
+    app.run(host='0.0.0.0', port=8080) # For Azure

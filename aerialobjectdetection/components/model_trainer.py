@@ -86,7 +86,10 @@ from aerialobjectdetection.entity.artifacts_entity import ModelTrainingArtifact
 from ultralytics import YOLO
 
 source_path = "YOLOv8Dataset/runs/detect/train/weights/best.pt"
+runs_folder = "Aerial-Object-Detection/YOLOv8Dataset"
 destination_path = "models/best.pt"
+root_dir = 'Aerial-Object-Detection'
+
 
 class ModelTrainer:
     def __init__(self, model_trainer_config: ModelTrainerConfig):
@@ -130,7 +133,7 @@ class ModelTrainer:
             
             logging.info("Training completed")
 
-            # Move best.pt after training
+            # Move best.pt and runs folder after training
             if os.path.exists(source_path):
                 try:
                     shutil.move(source_path, destination_path)
@@ -141,6 +144,20 @@ class ModelTrainer:
             else:
                 logging.error("best.pt file not found after training.")
                 raise AppException("best.pt file not found after training.", sys)
+            
+            if os.path.exists(runs_folder):
+                try:
+                    # Construct the destination path for the runs folder in the root directory
+                    destination_runs_path = os.path.join(root_dir, 'runs')
+                    shutil.move(runs_folder, destination_runs_path)
+                    # shutil.remove("YOLOv8Dataset")
+                    logging.info(f"Runs folder moved to {destination_runs_path}")
+                except Exception as e:
+                    logging.error(f"Failed to move runs folder: {str(e)}")
+                    raise AppException(f"Failed to move runs folder: {str(e)}", sys)
+            else:
+                logging.error("Runs folder not found after training.")
+                raise AppException("Runs folder not found after training.", sys)
             
             # Save model path in artifact
             model_trainer_artifact = ModelTrainingArtifact(trained_model_file_path=destination_path)
