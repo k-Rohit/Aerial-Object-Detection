@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://aodproject.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_3667dc7b7028402595d55ad93a4aed2d }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_0ad93e345edc450db079c763b1530774 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_448a9447f2bd407b9dded4606c767efa }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_cfbc1b5b32b447d1993c34e7d077f9b6 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: aodproject.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_3667dc7b7028402595d55ad93a4aed2d }}/aod:${{ github.sha }}
+        tags: aodproject.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_448a9447f2bd407b9dded4606c767efa }}/aodproject/aod:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'aodproject'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_30a1f155961d4e02a5e55b29bf694a35 }}
-        images: 'aodproject.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_3667dc7b7028402595d55ad93a4aed2d }}/aod:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_be15bd245f1644b699d5cd90e9b116af }}
+        images: 'aodproject.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_448a9447f2bd407b9dded4606c767efa }}/aodproject/aod:${{ github.sha }}'
