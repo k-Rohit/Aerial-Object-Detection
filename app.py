@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 from wtforms import FileField, SubmitField
 from wtforms.validators import InputRequired
 from aerialobjectdetection.pipeline.training_pipeline import TrainPipeline
-
+  
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'key1'
 app.config['UPLOAD_FOLDER'] = 'Uploads'
