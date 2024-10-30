@@ -1,0 +1,15 @@
+artifact_uri: /Users/kumarrohit/Desktop/Aerial-Object-Detection/Aerial-Object-Detection/YOLOv8Dataset/runs/mlflow/764526516035700500/1315d60918424be88bac4483effad560/artifacts
+end_time: 1729675810969
+entry_point_name: ''
+experiment_id: '764526516035700500'
+lifecycle_stage: active
+run_id: 1315d60918424be88bac4483effad560
+run_name: train
+run_uuid: 1315d60918424be88bac4483effad560
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729661589688
+status: 3
+tags: []
+user_id: kumarrohit
