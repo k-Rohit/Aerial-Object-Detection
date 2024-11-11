@@ -40,6 +40,9 @@ class DataIngestion:
         except Exception as e:
             raise AppException(e, sys)
     
+    def download_data_from_azure(self):
+        pass
+    
     def extract_zip_file(self, zip_file_path: str) -> str:
         '''
         zip_file_path: str
