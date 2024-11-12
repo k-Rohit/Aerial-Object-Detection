@@ -9,7 +9,7 @@ This project aims to develop an AI-powered surveillance system designed to accur
 The current surveillance systems in military and defense contexts face significant challenges in detecting and classifying aerial and naval objects over long distances in dynamic environments. These challenges include high latency, low accuracy, and limited multi-target handling capabilities. This project aims to enhance real-time processing, improve detection accuracy, and reduce reliance on human operators.
 
 - And many others...
-
+ 
 ## Technology Stack
 
 - **Data Storage**: Local or cloud storage solutions (e.g., Google Drive)
